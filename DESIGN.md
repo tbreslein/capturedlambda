@@ -24,6 +24,15 @@ NextJS pages, which is way simpler than what I tried to do before.
 - svelte and typescript
 - eslint + prettier and related plugins
 - tailwind css + typography plugin (for rendering the blog posts) + daisyui
-- jest: testing framework
+- jest + svelte-testing (https://timdeschryver.dev/blog/how-to-test-svelte-components)
 - detox: end-to-end testing
+
+## svelte concepts to keep in mind/reread when I need them
+
+[tut](https://learn.svelte.dev/tutorial/welcome-to-svelte)
+
+- bindings: bind component values (like values of input fields) to javascript variables
+- slots: basically like `children` in React, but there are named slots, you can check the presence
+  of some named slots, slot info can be propagated back to the parent
+- context API: like in react, set scoped variables / consts that travel down the component tree
 
