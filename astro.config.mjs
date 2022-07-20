@@ -9,7 +9,4 @@ export default defineConfig({
   integrations: [svelte(), tailwind({
       config: { applyBaseStyles: false },
   })],
-  markdown: {
-    drafts: import.meta.env.DEV, // only build drafts during DEV
-  }
 });
