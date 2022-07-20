@@ -1,6 +1,6 @@
 ---
+layout: ../../../layouts/PostLayout.astro
 title: Learning Programming as a Physicist
-draft: true
 ---
 # Learning programming as a physicist
 

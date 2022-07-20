@@ -1,17 +1,12 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component front matter". It never runs in the browser.
-import "../styles/global.css"
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+<BaseLayout>
+  <h1>tblog</h1>
+  <h3>A small programming-focused blog by a former physicist</h3>
+  <p>
+    This blog is my little foray into writing down my thoughts for sake of
+    writing them down. Do not expect incredible relevations.
+  </p>
+  <h2>Posts:</h2>
+</BaseLayout>
