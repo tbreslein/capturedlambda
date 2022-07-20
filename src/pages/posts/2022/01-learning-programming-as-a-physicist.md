@@ -1,3 +1,7 @@
+---
+title: Learning Programming as a Physicist
+draft: true
+---
 # Learning programming as a physicist
 
 > ... and why it doesn't make you a software engineer.
