@@ -1,5 +1,8 @@
 ---
+import Header from "../components/Header/Header.svelte";
+import Footer from "../components/Footer/Footer.svelte";
 import "../styles/global.css"
+const { page } = Astro.props;
 ---
 <html>
   <head>
@@ -7,11 +10,11 @@ import "../styles/global.css"
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!-- Header -->
+    <Header/>
     <div class="prose">
       <slot />
     </div>
-    <!-- Footer -->
+    <Footer />
   </body>
 </html>
 
