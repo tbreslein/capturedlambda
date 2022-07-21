@@ -38,7 +38,7 @@
         >
           <path stroke-linecap="round" stroke-linejoin="round" d={item.d} />
         </svg>
-        {item.name}
+        <span class="hidden md:block">{item.name}</span>
       </a>
     </li>
   {/each}
