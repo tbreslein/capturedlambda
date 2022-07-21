@@ -4,19 +4,18 @@
 
 @layer base {
   h1 {
-    @apply text-secondary font-semibold underline
+    @apply text-secondary font-semibold underline;
   }
   h2 {
-    @apply text-secondary font-semibold
+    @apply text-secondary font-semibold;
   }
   p {
-    @apply text-primary
+    @apply text-primary;
   }
 }
 
 @layer components {
   .prose {
-    @apply pt-8 lg:prose-xl prose-p:text-justify prose-h1:text-center prose-h1:underline prose-h2:underline text-primary prose-headings:text-secondary
+    @apply container mx-auto px-8 md:px-20 lg:px-40 xl:px-72 pt-8 prose-p:text-justify prose-h1:text-center prose-h1:underline prose-h2:underline text-primary prose-headings:text-secondary;
   }
 }
-
