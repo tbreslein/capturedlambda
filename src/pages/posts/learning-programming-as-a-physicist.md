@@ -3,6 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: Learning Programming as a Physicist
 author: Tommy Breslein
 date: 2022-07-22
+draft: true
 ---
 
 # {frontmatter.title}

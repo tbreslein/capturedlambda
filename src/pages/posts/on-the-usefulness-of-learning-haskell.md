@@ -3,6 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: On the Usefulness of Learning Haskell
 author: Tommy Breslein
 date: 2022-07-24
+draft: true
 ---
 
 # {frontmatter.title}
