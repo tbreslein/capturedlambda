@@ -1,8 +1,11 @@
 ---
-layout: ../../../layouts/PostLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: Learning Programming as a Physicist
+author: Tommy Breslein
+date: 2022-07-22
 ---
-# Learning programming as a physicist
+
+# {frontmatter.title}
 
 > ... and why it doesn't make you a software engineer.
 
@@ -16,12 +19,12 @@ simulations, data reduction, ...
 
 example:
 
-~~~typescript
+```typescript
 const x = 1.0;
 for (let i = 0; i < 3; i++) {
   console.log("i");
 }
-~~~
+```
 
 ### 1.2 the average curriculum
 

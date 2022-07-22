@@ -1,10 +1,27 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+
+interface Frontmatter {
+  title: string;
+  date: string;
+}
+
+const transformDate = (inputDate: Date) => {
+  return new Date(inputDate).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month:
+  "short", day: "numeric"})
+}
+
+const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
 ---
 <BaseLayout>
+  {posts.map(post => <em>by {post.frontmatter.author}<br> released on
+  {transformDate(post.frontmatter.date)}</em>)}
+  <div class="p-1">
+    <p></p>
+  </div>
   <slot />
   <!-- bit of spacing between blog content and creativecommons -->
-  <div class="p-12">
+  <div class="p-8">
     <p></p>
   </div>
   <!-- Creative Commons -->
