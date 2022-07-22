@@ -1,5 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import PostListItem from "../components/Main/PostListItem.svelte";
+
+interface Frontmatter {
+  title: string;
+  date: string;
+  draft?: boolean;
+}
+
+interface Post {
+  title: string;
+  date: Date;
+  url: string;
+  draft: boolean;
+}
+
+const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
+
+const postList: Post[] = posts.map(post => {
+  return { 
+    title: post.frontmatter.title,
+    date: new Date(post.frontmatter.date),
+    url: post.url,
+    draft: post.frontmatter.draft || false,
+  };
+}).sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
 <BaseLayout>
   <h3>A small programming-focused blog by a former physicist</h3>
@@ -8,4 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     writing them down. Do not expect incredible relevations.
   </p>
   <h2>Posts:</h2>
+  <ul>
+    {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
+  </ul>
 </BaseLayout>
