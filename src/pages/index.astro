@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import LandingPageLayout from '../layouts/LandingPageLayout.astro'
 import PostListItem from "../components/Main/PostListItem.svelte";
 
 interface Frontmatter {
@@ -26,17 +26,15 @@ const postList: Post[] = posts.map(post => {
   };
 }).sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
-<BaseLayout>
-  <div class="mx-10">
-    <h3>A small programming-focused blog by a former physicist</h3>
-    <p>
-      This blog is my little foray into writing down my thoughts for sake of
-      writing them down. Do not expect incredible relevations.
-    </p>
-    <h2>Posts:</h2>
-    <!-- <ul class="menu menu-compact bg-neutral rounded-box"> -->
-    <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
-      {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
-    </ul>
-  </div>
-</BaseLayout>
+<LandingPageLayout>
+  <h3>A small programming-focused blog by a former physicist</h3>
+  <p>
+    This blog is my little foray into writing down my thoughts for sake of
+    writing them down. Do not expect incredible relevations.
+  </p>
+  <h2>Posts:</h2>
+  <!-- <ul class="menu menu-compact bg-neutral rounded-box"> -->
+  <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
+    {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
+  </ul>
+</LandingPageLayout>
