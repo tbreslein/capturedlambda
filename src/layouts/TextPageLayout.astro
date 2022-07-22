@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SideBarList from '../components/Main/SideBarList.svelte';
+import { Frontmatter, Post, PostsByYear, getSortedPosts } from "../utility/postList.ts"
+
+const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
+const postList = getSortedPosts(posts);
+
+const minYear: number = postList.length > 0 ? postList[postList.length - 1].date.getFullYear() : 0;
+const maxYear: number = postList.length > 0 ? postList[0].date.getFullYear() : 0;
+
+const postsByYear: PostsByYear[] = [];
+for (let year = maxYear; year >= minYear; year--) {
+  postsByYear.push({year: year, posts: postList.filter((post) => post.date.getFullYear() === year)});
+}
+console.log(postsByYear);
+---
+<BaseLayout>
+  <div class="flex flex-row">
+    <SideBarList postsByYear={postsByYear} />
+    <div class="mx-40">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+

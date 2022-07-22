@@ -1,30 +1,10 @@
 ---
-import LandingPageLayout from '../layouts/LandingPageLayout.astro'
+import LandingPageLayout from '../layouts/LandingPageLayout.astro';
 import PostListItem from "../components/Main/PostListItem.svelte";
-
-interface Frontmatter {
-  title: string;
-  date: string;
-  draft?: boolean;
-}
-
-type Post = {
-  title: string;
-  date: Date;
-  url: string;
-  draft: boolean;
-}
+import { Frontmatter, getSortedPosts } from "../utility/postList.ts"
 
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
-
-const postList: Post[] = posts.map(post => {
-  return { 
-    title: post.frontmatter.title,
-    date: new Date(post.frontmatter.date),
-    url: post.url,
-    draft: post.frontmatter.draft || false,
-  };
-}).sort((a, b) => b.date.valueOf() - a.date.valueOf());
+const postList = getSortedPosts(posts);
 ---
 <LandingPageLayout>
   <h3>A small programming-focused blog by a former physicist</h3>
@@ -33,7 +13,6 @@ const postList: Post[] = posts.map(post => {
     writing them down. Do not expect incredible relevations.
   </p>
   <h2>Posts:</h2>
-  <!-- <ul class="menu menu-compact bg-neutral rounded-box"> -->
   <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
     {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
   </ul>

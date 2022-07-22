@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { transformDate } from "../../utiliy/transformDate";
+  import { transformDate } from "../../utility/transformDate";
 
   export let date: Date;
   export let title: string;
