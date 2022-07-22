@@ -33,6 +33,7 @@ const postList: Post[] = posts.map(post => {
     writing them down. Do not expect incredible relevations.
   </p>
   <h2>Posts:</h2>
+  <!-- <ul class="menu menu-compact bg-neutral rounded-box"> -->
   <ul>
     {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
   </ul>

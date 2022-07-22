@@ -1,16 +1,11 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+import { transformDate } from '../utiliy/transformDate.ts'
 
 interface Frontmatter {
   title: string;
   date: string;
 }
-
-const transformDate = (inputDate: Date) => {
-  return new Date(inputDate).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month:
-  "short", day: "numeric"})
-}
-
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
 
 // filter posts for the current page, so we know which author and date to print between the <em>s
