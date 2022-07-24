@@ -1,5 +1,5 @@
 ---
-import TextPageLayout from './TextPageLayout.astro'
+import BaseLayout from './BaseLayout.astro';
 import { transformDate } from '../utility/transformDate.ts'
 
 interface Frontmatter {
@@ -11,7 +11,7 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
 // filter posts for the current page, so we know which author and date to print between the <em>s
 const thisPost = posts.find(post => Astro.request.url.endsWith(post.url));
 ---
-<TextPageLayout>
+<BaseLayout>
   <em>by {thisPost.frontmatter.author}</em><br>
   <em>released on {transformDate(thisPost.frontmatter.date)}</em>
 
@@ -25,4 +25,4 @@ const thisPost = posts.find(post => Astro.request.url.endsWith(post.url));
   </div>
   <!-- Creative Commons -->
   <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tblog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tblog.com" property="cc:attributionName" rel="cc:attributionURL">Tommy Breslein</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/tbreslein/tblog" rel="dct:source">https://github.com/tbreslein/tblog</a>.
-</TextPageLayout>
+</BaseLayout>
