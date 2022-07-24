@@ -30,7 +30,7 @@
       <a {href} class="btn-ghost text-secondary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-6 w-6 hidden md:block"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -38,7 +38,7 @@
         >
           <path stroke-linecap="round" stroke-linejoin="round" {d} />
         </svg>
-        <span class="hidden md:block">{name}</span>
+        {name}
       </a>
     </li>
   {/each}
