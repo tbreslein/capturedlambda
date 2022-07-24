@@ -24,7 +24,7 @@
   ];
 </script>
 
-<ul class="menu menu-horizontal p-0">
+<ul class="menu p-0">
   {#each navItems as { href, name, d } (name)}
     <li>
       <a {href} class="btn-ghost text-secondary">

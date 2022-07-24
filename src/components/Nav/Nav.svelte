@@ -3,10 +3,7 @@
   import NavList from "./NavList.svelte";
 </script>
 
-<div class="fixed inset-x-0 top-0 navbar h-8 bg-neutral">
+<aside class="w-24 pl-0 md:w-44 fixed left-0 top-0 h-screen bg-neutral p-10">
   <MainIcon />
   <NavList />
-</div>
-<div>
-  <p class="p-12 w-9/12" />
-</div>
+</aside>

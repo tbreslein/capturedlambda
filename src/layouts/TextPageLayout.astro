@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SideBarList from '../components/Main/SideBarList.svelte';
 import { Frontmatter, Post, PostsByYear, getSortedPosts } from "../utility/postList.ts"
 
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
@@ -16,8 +15,7 @@ for (let year = maxYear; year >= minYear; year--) {
 ---
 <BaseLayout>
   <div class="flex flex-row">
-    <SideBarList postsByYear={postsByYear} />
-    <div class="mx-3.5">
+    <div class="mx-3.5 px-96">
       <slot />
     </div>
   </div>

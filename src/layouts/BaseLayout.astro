@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header/Header.svelte";
+import Nav from "../components/Nav/Nav.svelte";
 import Footer from "../components/Footer/Footer.svelte";
 import "../styles/global.css"
 const { page } = Astro.props;
@@ -10,9 +10,11 @@ const { page } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <Header/>
-    <div class="prose">
-      <slot />
+    <div class="flex">
+      <Nav />
+      <main class="flex-1 ml-24 md:ml-44 prose">
+        <slot />
+      </main>
     </div>
     <Footer />
   </body>
