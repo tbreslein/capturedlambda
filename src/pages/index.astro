@@ -4,7 +4,7 @@ import PostListItem from "../components/Main/PostListItem.svelte";
 import { Frontmatter, getSortedPosts } from "../utility/postList.ts"
 
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
-const postList = getSortedPosts(posts);
+const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
 ---
 <LandingPageLayout>
   <h3>A small programming-focused blog by a former physicist</h3>
