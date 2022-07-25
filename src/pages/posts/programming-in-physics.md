@@ -16,12 +16,7 @@ crunching in mind.
 One of the professors in my institute even had the chance of working with the Cray-1 installation in
 Garching, if memory serves, which supposedly was the first Cray installation outside of the US.
 
-In the years since, over the last couple of decades, "programming" as term kind of evolved.
-Back then a "programmer" was planning out and stamping punch cards to write code; in physics
-virtually all of it being written in the Fortran programming language.
-
-Since then, programming escaped academia, the military, and information technology, and its products
-are now EVERYWHERE.
+In the years since, "programming" as term kind of evolved.
 Being a "programmer" is its own trade now, and with that came good practices that have been
 developed, design patterns have been found and established; There is now a vague understanding of
 what good programming is (though your mileage may vary on what it entails to be "good").
@@ -34,17 +29,14 @@ You could obviously argue that software projects in academia do not "need" thing
 control, project structure (in terms of the team as well as the source code), and proper testing,
 but I think this view is incredibly misguided.
 
-This whole post is basically just a big rant about the state of "programming in physics". I was the
-same a couple of years ago, and I don't think of myself as a "good" software dev, but I also don't
-think you need to be one to understand the absolute state of it in physics.
+This whole post is basically just a big rant about the state of "programming in physics".
+I was what I would now call a "typical physics programmer", and I don't think of myself as a "good"
+software developer now, but I also don't think you need to be one to understand the absolute state
+of software in physics.
 
-## 1. The context
+## 1. what do physicists need programming for
 
-Let's get you up to speed on what that "state" even is.
-Let's frist talk about what physicists need programming for in the first place, or at least what
-some of them need it for.
-
-### 1.1 what do physicists need programming for
+Let's first provide a bit of context, by talking about what programming is used for in physics.
 
 First and foremost, not every field in physics is the same when it comes to the kind of programming
 they do.
@@ -58,39 +50,55 @@ there, they are still a "sort of" programming that everyone in physics is famili
 
 Personally, I do not have a lot of experience with experimental physics.
 My training is in numerical physics which is inherently virtually nothing but programming.
-I know that there experimental physics groups out there using `LabView` to program equipment
-pipelines, or write micro controller code in `C`.
+I do know that there experimental physics groups out there using `LabView` to program equipment
+pipelines, or write micro controller code in `C`, but I'm going to focus on what my expertise is.
 
-### 1.2 the average curriculum
+In numerical physics, the simulation is our lab.
+We build software that solves a set of (often times differential) equations for some set of initial
+and boundary conditions.
 
-at best one basics course + numerical programming
+As a trivial example, let's say we wrote a solver for Newton's law of motion, then maybe I can give
+it initial and boundary conditions that model me throwing a ball on Earth at a certain height, angle
+and velocity, and the solver then spits out the trajectory of that ball.
 
-### 1.3 is it enough?
+The more sophisticated the problem and the sets of equations we need to solve, the more powerful our
+hard- and software needs to be.
+When it comes to the really tough nuts to crack, where a single simulation may run days or weeks, we
+cannot leave any shred of performance on the table, so the languages you usually see used in this
+context are `C`, `C++`, and `Fortran`.
+In the same vein, number crunching simulation software (usually) does not have any sort of GUI.
+You just give it a configuration, run the simulation, and end up with an output that is just a bunch
+of numbers.
 
-probably not.
+I just mention this, because this is not the sort of software you often see being written in the
+industry.
+There are obviously examples like it, but they are few and far between.
+The problems we solve in academia are fundamentally different to "regular" software development
+problems.
 
-## 2. switching jobs
+## 2. The rant: What I dislike about software development in physics / academia
 
-if, like me, you want to leave academia for a dev position
+### 2.1 Lack of structure
 
-### 2.1 discipline
+Both in terms of the team as well as the source code.
 
-keep. learning. and try not to skip 'hard' topics
+Lack of team structure, way often than it should leaving people by themselves, leads to things like
+global variables...
 
-### 2.2 dive into the essentials: compiling, toolchains, data structures, algos, ...
+### 2.2 Refusal to learn your tools / toolchain
 
-actually learn what a compiler does, at least in principle, learn how to use tools like cmake, learn
-actual data structures and algorithms...
+- compilers, builders
+- git
+- shell
 
-### 2.3 languages
+### 2.3 Testing
 
-broaden your horizon a bit: something like C, something like Python, probably javascript, maybe
-Haskell...
+"unit tests" lol
 
-### 2.4 sources and practice
+### 2.4 Personal pet peeve: Licensing
 
-books, codewars
+"I don't want to constrain the usage of our code"
 
-### 2.5 learn modern tools (shell, git)
+## 3. What I wish would change
 
-for christ's sake, please learn git and BASIC shell scripting
+basically a conclusion
