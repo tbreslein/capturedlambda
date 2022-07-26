@@ -1,6 +1,6 @@
 <!--
- @component
- Displays the tblog "icon" (currently just a string).
+  @component
+  Displays the tblog "icon" (currently just a string).
 -->
 
 <div class="flex-1">
