@@ -81,17 +81,17 @@ projects that only have a single person working on it.
 But often enough you have 2-4 layers of hierarchy for a given project (now mind you, I'm talking
 about the research project, not the software development project!):
 You have the professor or someone who's leading the work group at the top, then you often have
-either the prof themselve, or a doc candidate or a postdoc leading the software project, and lastly
+either the prof themself, or a doc candidate or a postdoc leading the software project, and lastly
 you have other postdocs / doc candidates / post grads / undergrads working on the project.
 
 With that, you would think that this gives you a pretty clear hierarchy to inform the distribution
-of responsibilities and priviliges for the project, no?
+of responsibilities and privileges for the project, no?
 
 Well, to be fair, something like that IS the most common setup, but there are way too many projects
 that lack any structure, where you have fully flat hierarchies, or just have people working
 completely independently from another.
 
-One particular case that comes to mind is that a couple of my coworkers are working on a project
+One particular case that comes to mind is that a couple of my co-workers are working on a project
 where the project lead was a former doc candidate here, and is now working as a postdoc at a
 different university.
 That postdoc is the de-facto project lead, but the communication between him and the other devs can
@@ -134,7 +134,7 @@ But unfortunately the directive from the top is that this is a waste of time:
 > You don't need to know how `CMake` works, you just need to produce papers.
 
 This extends to using the tools of the language as well.
-That project that I mentioned earlier was stuck in `C++98` because of "backwards compatabiliy"
+That project that I mentioned earlier was stuck in `C++98` because of "backwards compatibility"
 reasons, because apparently they wanted to make sure the program can still compile on systems that
 haven't been updated in two decades.
 Targeting Debian stable, maybe even oldstable, is fine, but this was not.
@@ -161,7 +161,7 @@ I don't think that can be overstated.
 ### 2.3 Testing
 
 To be fair, "testing" in general is weird topic in software development.
-Everyone says they are always adamament about writing good tests, but...
+Everyone says they are always adamant about writing good tests, but...
 
 Mathematical simulation software is an interesting case study where the software itself actually
 lends itself HEAVILY to testing.
@@ -204,7 +204,7 @@ appropriate for your project.
 Once you're done with that, you probably will not have to deal with this topic in that project for
 many years, maybe ever again.
 
-Changing the prevelant behaviour around licensing in academia would protect people and projects from
+Changing the prevalent behaviour around licensing in academia would protect people and projects from
 so many potential legal trouble, it's insane...
 
 ## 3. A conclusion of sorts
@@ -214,7 +214,7 @@ The amount of structure and standards I was confronted with gave me whiplash, bu
 they are there.
 These things were developed and established because they actually led to more efficient development
 processes.
-It was like opening pandoras box, because now I cannot unsee what's wrong with how things are going
+It was like opening Pandora's box, because now I cannot unsee what's wrong with how things are going
 in academia and how much time and thus money is wasted due to a refusal to invest time upfront and
 praying that problems just never come up.
 
@@ -230,4 +230,4 @@ Learning how to use a compiler and build tools rarely takes longer than a week c
 Learning how to use the command line rarely takes longer than a day or two.
 
 And this knowledge will pay off.
-You will save yourselve a lot of your most precious ressource, which is time.
+You will save yourself a lot of your most precious resource, which is time.
