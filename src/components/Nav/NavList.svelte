@@ -1,12 +1,11 @@
 <!--
- @component
- Displays the list of navigation items that are displayed on the side bar. These items are displayed
- as a `<ul>`, where each `<li>` is an anchor tag wrapped an SVG for the icon and the name of the
- section being linked to.
-
- Note that the SVG icons are hidden on small devices to save space.
+  @component
+  Displays the list of navigation items that are displayed on the side bar. These items are displayed
+  as a `<ul>`, where each `<li>` is an anchor tag wrapped an SVG for the icon and the name of the
+  section being linked to.
+ 
+  Note that the SVG icons are hidden on small devices to save space.
 -->
-
 <script lang="ts">
   type NavItem = {
     href: string;

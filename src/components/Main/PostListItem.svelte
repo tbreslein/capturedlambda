@@ -1,13 +1,12 @@
 <!--
- @component
- Displays a card displaying a date and title of a blog post, and linking to its href.
-
- Props:
- date: Date
- title: string
- href: string
+  @component
+  Displays a card displaying a date and title of a blog post, and linking to its href.
+ 
+  Props:
+  date: Date
+  title: string
+  href: string
 -->
-
 <script lang="ts">
   import { transformDate } from "../../utility/transformDate";
 
