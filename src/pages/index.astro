@@ -6,6 +6,13 @@ import { Frontmatter, getSortedPosts } from "../utility/postList.ts"
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
 const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
 ---
+
+<!--
+  @astropage
+  The landing page accessed by going to `"/"` or by clicking either the logo or the home navigation
+  button.
+-->
+
 <LandingPageLayout>
   <h3>A small programming-focused blog by a former physicist</h3>
   <p>
