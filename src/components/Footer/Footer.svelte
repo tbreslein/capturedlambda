@@ -1,3 +1,9 @@
+<!--
+ @component
+ Displays the global Footer, which lists some social media links, as well as the copyright notice
+ for the web page.
+-->
+
 <script lang="ts">
   const buttonClasses = "btn btn-xs btn-ghost";
 </script>
