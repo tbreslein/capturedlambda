@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: Programming in Physics
+title: The absolute State of Programming in Physics
 author: Tommy Breslein
 date: 2022-07-22
 draft: true
