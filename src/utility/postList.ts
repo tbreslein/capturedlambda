@@ -14,11 +14,6 @@ export type Post = {
   draft: boolean;
 };
 
-export type PostsByYear = {
-  year: number;
-  posts: Post[];
-};
-
 export function getSortedPosts(posts: Frontmatter[]): Post[] {
   return posts
     .map((post) => {
