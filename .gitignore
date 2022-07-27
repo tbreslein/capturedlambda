@@ -33,3 +33,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# astro
+/dist/
+
+# netlify
+/.netlify/
