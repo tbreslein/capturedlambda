@@ -32,7 +32,7 @@
   ];
 </script>
 
-<ul class="menu p-0">
+<ul class="menu p-0 menu-horizontal md:menu-vertical">
   {#each navItems as { href, name, d } (name)}
     <li>
       <a {href} class="btn-ghost text-secondary">
@@ -46,7 +46,7 @@
         >
           <path stroke-linecap="round" stroke-linejoin="round" {d} />
         </svg>
-        <span class="hidden md:block">{name}</span>
+        <span class="hidden sm:block">{name}</span>
       </a>
     </li>
   {/each}

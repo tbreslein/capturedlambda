@@ -30,11 +30,22 @@ const { title } = Astro.props;
     <title>&#91 λ &#93: {title}</title>
   </head>
   <body>
-    <div class="flex">
-      <Nav />
-      <main class="flex-1 ml-14 md:ml-36 px-5 md:px-10 lg:px-24 xl:px-40 2xl:px-60 prose">
-        <slot />
-      </main>
+    <!-- mobile -->
+    <div class="block md:hidden">
+        <Nav />
+        <main class="px-5 prose max-w-none">
+          <slot />
+        </main>
+    </div>
+    <!-- desktop -->
+    <div class="hidden md:block">
+      <div class="flex">
+        <Nav />
+        <main class="flex-1 ml-14 md:ml-36 px-5 md:px-10 lg:px-24 xl:px-40 2xl:px-60 prose
+        max-w-none">
+          <slot />
+        </main>
+      </div>
     </div>
     <Footer />
   </body>
