@@ -6,3 +6,8 @@ Astro
 matplotlib
 oldstable
 unsee
+astropage
+capturedlambda
+creativecommons
+astrolayout
+blurp
