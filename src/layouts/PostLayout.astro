@@ -18,7 +18,7 @@ const thisPost = posts.find(post => Astro.request.url.endsWith(post.url));
   well as the Creative Commons notice at the bottom.
 -->
 
-<BaseLayout>
+<BaseLayout title={thisPost.frontmatter.title}>
   <em>by {thisPost.frontmatter.author}</em><br>
   <em>released on {transformDate(thisPost.frontmatter.date)}</em>
 

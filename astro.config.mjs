@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.tblog.com",
+  site: "https://www.capturedlambda.com",
   integrations: [
     svelte(),
     tailwind({
