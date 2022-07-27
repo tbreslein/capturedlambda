@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
+import netlify from "@astrojs/netlify/functions";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -17,4 +18,6 @@ export default defineConfig({
       theme: "monokai",
     },
   },
+  output: "server",
+  adapter: netlify(),
 });
