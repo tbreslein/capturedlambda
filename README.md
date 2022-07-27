@@ -1,4 +1,4 @@
-# tblog
+# Captured Lambda
 
 A little blog from a dude that got a master's in astrophysics, but then decided to turn to software
 development.
