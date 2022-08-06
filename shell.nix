@@ -4,12 +4,9 @@ let
   NPM_CONFIG_PREFIX = toString ./npm_config_prefix;
 in
 pkgs.mkShell {
-  inputsFrom = with pkgs; [
+  packages = with pkgs; [
     nodejs
     nodePackages.npm
-  ];
-
-  packages = with pkgs.nodePackages; [
     nodePackages.cspell
     nodePackages.svelte-language-server
     nodePackages.typescript-language-server
