@@ -4,7 +4,7 @@ let
   NPM_CONFIG_PREFIX = toString ./npm_config_prefix;
 in
 pkgs.mkShell {
-  packages = with pkgs; [
+  packages = with pkgs.nodePackages; [
     nodejs
     nodePackages.npm
     nodePackages.cspell
