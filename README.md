@@ -21,7 +21,7 @@ it here, to document my journey.
 
 ## Licensing
 
-The webiste is licensed under the BSD-3 license found in the `LICENSE` file at the root of this
+The website is licensed under the BSD-3 license found in the `LICENSE` file at the root of this
 source tree.
 
 The blog entries are licensed under the following Creative Commons agreement CC BY-NC 4.0.
@@ -36,5 +36,5 @@ You do not have to comply with the license for elements of the material in the p
 
 No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
-Follow this link for the detailed license overwiew:
+Follow this link for the detailed license overview:
 [Link to creative commons](https://creativecommons.org/licenses/by-nc/4.0/)
