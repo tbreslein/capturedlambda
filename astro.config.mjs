@@ -3,6 +3,7 @@ import svelte from "@astrojs/svelte";
 import netlify from "@astrojs/netlify/functions";
 import robotsTxt from "astro-robots-txt";
 import mdx from '@astrojs/mdx'
+import solid from '@astrojs/solid-js';
 
 import tailwind from "@astrojs/tailwind";
 
@@ -19,6 +20,7 @@ export default defineConfig({
     }),
     robotsTxt(),
     mdx(),
+    solid(),
   ],
   markdown: {
     shikiConfig: {
