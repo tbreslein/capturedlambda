@@ -3,7 +3,7 @@ import LandingPageLayout from '../layouts/LandingPageLayout.astro';
 import PostListItem from "../components/Main/PostListItem.svelte";
 import { Frontmatter, getSortedPosts } from "../utility/postList.ts"
 
-const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
+const posts = await Astro.glob<Frontmatter>('../pages/posts/*.mdx')
 const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
 ---
 
