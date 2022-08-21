@@ -3,12 +3,14 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "noEmit": true,
     "isolatedModules": true,
+    "resolveJsonModule": true,
     "types": ["astro/client"],
-    "outDir": "./dist",
-    "plugins": [{
-      "name": "typescript-svelte-plugin"
-    }]
+    "outDir": "./dist"
   }
 }
