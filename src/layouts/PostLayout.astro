@@ -1,10 +1,11 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import { transformDate } from '../utility/transformDate.ts'
+import { transformDate } from '../utility/transformDate'
 
 interface Frontmatter {
   title: string;
   date: string;
+  author: string;
 }
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.mdx')
 
@@ -20,7 +21,7 @@ const thisPost = posts.find(post => Astro.request.url.endsWith(post.url));
 
 <BaseLayout title={thisPost.frontmatter.title}>
   <em>by {thisPost.frontmatter.author}</em><br>
-  <em>released on {transformDate(thisPost.frontmatter.date)}</em>
+  <em>released on {transformDate(new Date(thisPost.frontmatter.date))}</em>
 
   <div class="p-1">
     <p></p>
