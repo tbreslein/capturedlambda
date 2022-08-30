@@ -18,7 +18,6 @@
             nodejs
             nodePackages.npm
             nodePackages.cspell
-            nodePackages.svelte-language-server
             nodePackages.typescript-language-server
             nodePackages.vscode-langservers-extracted
           ];
