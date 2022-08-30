@@ -6,7 +6,7 @@ date: 2022-07-26
 draft: false
 ---
 
-# {frontmatter.title}
+# The State of Programming in Physics
 
 Programming has been a thing in physics since way before most of us have been born.
 One could argue that computers have been designed first and foremost with encryption and number
