@@ -3,7 +3,9 @@ import MainIcon from "./MainIcon";
 import NavList from "./NavList";
 
 /**
- * Renders a small card as list item with the title and date for a post that links to that post.
+ * Renders the Navbar.
+ *
+ * This component is switches between a top and a sidebar depending on the screen size.
  */
 const Nav: Component = () => (
   <>

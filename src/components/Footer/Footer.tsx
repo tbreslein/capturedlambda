@@ -1,6 +1,10 @@
 import { Component } from "solid-js";
 
 const buttonClasses = "btn btn-xs btn-ghost";
+
+/**
+ * Renders the global footer for the page, containing links to Twitter and Github, as well as a small copyright notice
+ */
 const Footer: Component = () => (
   <>
     <div class="p-24">

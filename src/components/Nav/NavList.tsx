@@ -1,11 +1,20 @@
 import { Component, For } from "solid-js";
 
+/**
+ * Properties of a navigation item
+ * @field href - link to where the item is supposed to point to
+ * @field name - name that is being rendered for this item
+ * @field d - svg path for this item
+ */
 type NavItem = {
   href: string;
   name: string;
   d: string;
 };
 
+/**
+ * Array of the Links in the navbar
+ */
 const navItems: NavItem[] = [
   {
     href: "/",
@@ -25,7 +34,7 @@ const navItems: NavItem[] = [
 ];
 
 /**
- * Renders a small card as list item with the title and date for a post that links to that post.
+ * Renders a List of navigation items
  */
 const NavList: Component = () => (
   <ul class="menu p-0 menu-horizontal md:menu-vertical">
