@@ -39,9 +39,9 @@ const navItems: NavItem[] = [
 const NavList: Component = () => (
   <ul class="menu p-0 menu-horizontal md:menu-vertical">
     <For each={navItems}>
-      {(item) => (
+      {({ href, name, d }) => (
         <li>
-          <a href={item.href} class="btn-ghost text-secondary">
+          <a href={href} class="btn-ghost text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 block"
@@ -50,9 +50,9 @@ const NavList: Component = () => (
               stroke="currentColor"
               stroke-width="2"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" d={item.d} />
+              <path stroke-linecap="round" stroke-linejoin="round" d={d} />
             </svg>
-            <span class="hidden sm:block">{item.name}</span>
+            <span class="hidden sm:block">{name}</span>
           </a>
         </li>
       )}
