@@ -1,6 +1,6 @@
 ---
 import LandingPageLayout from '../layouts/LandingPageLayout.astro';
-import PostListItem from "../components/Main/PostListItem.svelte";
+import PostListItem from "../components/Main/PostListItem.tsx";
 import { Frontmatter, getSortedPosts } from "../utility/postList.ts"
 
 const posts = await Astro.glob<Frontmatter>('../pages/posts/*.mdx')
