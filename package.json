@@ -14,11 +14,11 @@
   "author": "tbreslein",
   "license": "BSD-3",
   "dependencies": {
-    "@astrojs/mdx": "^0.10.2",
-    "@astrojs/netlify": "^1.0.1",
-    "@astrojs/solid-js": "^1.1.0",
-    "astro": "^1.1.1",
-    "solid-js": "^1.5.2"
+    "@astrojs/mdx": "^0.11.6",
+    "@astrojs/netlify": "^1.2.1",
+    "@astrojs/solid-js": "^1.2.3",
+    "astro": "^1.6.10",
+    "solid-js": "^1.6.2"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
