@@ -1,10 +1,7 @@
 ---
-import LandingPageLayout from '../layouts/LandingPageLayout.astro';
+import PortfolioLayout from '../layouts/PortfolioLayout.astro';
 import PostListItem from "../components/Main/PostListItem";
 import { Frontmatter, getSortedPosts } from "../utility/postList"
-
-const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
-const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
 ---
 
 <!--
@@ -13,15 +10,10 @@ const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft))
   button.
 -->
 
-<LandingPageLayout>
-  <h1>Captured Lambda</h1>
-  <h3>A small programming-focused blog by a former physicist</h3>
+<PortfolioLayout>
+  <h1>captured lambda</h1>
+  <h3>portolio ++ blog ++ </h3>
   <p>
-    This blog is my little foray into writing down my thoughts for the sake of
-    writing them down. Do not expect incredible revelations.
+    foobar
   </p>
-  <h2>Posts:</h2>
-  <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
-    {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
-  </ul>
-</LandingPageLayout>
+</PortfolioLayout>

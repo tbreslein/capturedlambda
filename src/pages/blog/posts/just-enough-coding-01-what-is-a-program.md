@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../../layouts/PostLayout.astro
 title: Just enough coding, pt. 1 - What is a program
 author: Tommy Breslein
 date: 2022-11-22
