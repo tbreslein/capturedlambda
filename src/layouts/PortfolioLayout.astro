@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<!--
+  @astrolayout
+  The layout for the landing page or home page. Just adds a div with a single class for that page.
+-->
+
+<BaseLayout title="Home">
+  <div class="mx-1">
+    <slot />
+  </div>
+</BaseLayout>
+

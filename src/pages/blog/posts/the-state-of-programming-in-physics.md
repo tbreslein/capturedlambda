@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../../layouts/PostLayout.astro
 title: The State of Programming in Physics
 author: Tommy Breslein
 date: 2022-07-26
