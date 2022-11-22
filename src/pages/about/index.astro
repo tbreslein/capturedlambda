@@ -13,7 +13,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <p>Hey, I'm Tommy, the author of this little blog.</p>
   <p>
     This site is basically a weird combination of venting and writing down
-    my thoughts, as well as playing around with React and building something
+    my thoughts, as well as playing around with Astro and building something
     with it from scratch. The posts on here will probably all be related to
     my journey of getting myself into software development, weird stuff I've
     seen, things I find fascinating, and other random bla.
@@ -37,39 +37,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </p>
   <p>
     My journey was a bit weird, and since I had to realise that academia
-    isn't something I want to work for till I retire, I took an IT job as an
+    isn't something I want to work for till I retire. I took an IT job as an
     'easy' job I could still do at my institute, keep working on my thesis,
     and then transition into software development next. I want to turn this
-    into my job, because not only has this turned into a major passion of
-    mine, I think I'm pretty good at it especially considering I'm fully
+    into my job, because not only has this become a major passion of mine,
+    I think I'm pretty good at it especially considering I'm fully
     self-taught and I can actually see myself doing this for decades.
   </p>
   <h3>
-    Okay, but WHY would you use a semi-sophisticated tech stack for a blog?
+    Okay, but what about the stack to build this?
   </h3>
   <p>
-    So, I used NextJS (with Typescript React), Tailwind/DaisyUI, and
-    Firebase for this blog. If I was asked to design an actual simple blog
-    page for a single author, even just using React probably wouldn't be the
-    first thing I would be thinking about. I would probably do a pure HTML
-    page, maybe with bootstrap or something, or maybe stick to Tailwind if
-    you can use that on just pure HTML pages too.
+    So, I used AstroJS, SolidJS, and Tailwind/DaisyUI for this blog, and
+    hosting it on Netlify. Before landing on AstroJS, I played around with
+    NextJS as the metaframework, but it did WAY too much for what I wanted
+    this site to be. I discovered AstroJS just a month or two before they
+    release 1.0, and I fell in love because of its flexibility, as well as
+    making it incredibly easy to just throw markdown at it for content.
   </p>
   <p>
-    Reason I used this stack was because I just learned React on my way to
-    learn React Native, and wanted a small project to get my feet wet and
-    actually build something with React. I also really type systems, so
-    using Typescript was a no-brainer. I'm not incredible at visual design,
-    so I threw in Tailwind and DaisyUI to do most of the heavy lifting
-    there. As a meta framework I then chose NextJS, because I was able do to
-    all of these in it with built-in static server side rendering on top of
-    it.
-  </p>
-  <p>
-    The idea from the get go was to pull the blog posts from a server, and,
-    at least as an intermediate solution, I'm using firebase because it was
-    easy to set up. I think eventually I want to write my own little backend
-    to store my posts in, but first I wanted to just get this thing running.
+    The fact that I can just swap what my components are built with, as
+    well as mix and match different component frameworks if I wanted to, is
+    absolutely fantastic. I ultimately landed on SolidJS for this, because
+    it looked enough like React that I could use previous knowledge, while
+    still being pretty darn easy and intuitive to use.
   </p>
 </BaseLayout>
 
