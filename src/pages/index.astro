@@ -2,6 +2,7 @@
 import PortfolioLayout from '../layouts/PortfolioLayout.astro';
 import PostListItem from "../components/Main/PostListItem";
 import { Frontmatter, getSortedPosts } from "../utility/postList"
+import { Image } from '@astrojs/image/components';
 ---
 
 <!--
@@ -11,9 +12,15 @@ import { Frontmatter, getSortedPosts } from "../utility/postList"
 -->
 
 <PortfolioLayout>
-  <h1>captured lambda</h1>
-  <h3>portolio ++ blog ++ </h3>
-  <p>
-    foobar
-  </p>
+  <div class="hero">
+    <div class="hero-content flex-col lg:flex-row">
+      <div>
+        <h1 class="text-accent">[λ] Tommy Breslein</h1>
+        <h3 class="py-2 text-center">Numerical astrophysics</h3>
+        <h3 class="py-2 text-center">about-to-be software dev</h3>
+        <h3 class="py-2 text-center">Rust evangelist</h3>
+      </div>
+      <Image src="../../assets/profile_test.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="" width="200" height="400"/>
+    </div>
+  </div>
 </PortfolioLayout>

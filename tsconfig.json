@@ -10,7 +10,7 @@
     "noEmit": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
-    "types": ["astro/client"],
+    "types": ["@astrojs/image/client"],
     "outDir": "./dist"
   }
 }
