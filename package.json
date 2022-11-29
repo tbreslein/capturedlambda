@@ -14,10 +14,12 @@
   "author": "tbreslein",
   "license": "BSD-3",
   "dependencies": {
+    "@astrojs/image": "^0.11.6",
     "@astrojs/mdx": "^0.12.0",
     "@astrojs/netlify": "^1.2.1",
     "@astrojs/solid-js": "^1.2.3",
     "astro": "^1.6.10",
+    "sharp": "^0.31.2",
     "solid-js": "^1.6.2"
   },
   "devDependencies": {
