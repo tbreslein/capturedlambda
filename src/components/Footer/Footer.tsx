@@ -20,7 +20,7 @@ const Footer: Component = () => (
         </a>
       </div>
       <p class="text-base-content">
-        Copyright © 2022 - All right reserved by Tommy Breslein
+        Copyright © 2022-2023 - All right reserved by Tommy Breslein
       </p>
     </footer>
   </>
