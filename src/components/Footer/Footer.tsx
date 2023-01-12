@@ -11,7 +11,7 @@ const Footer: Component = () => (
       <p />
     </div>
     <footer class="fixed bottom-0 footer footer-center p-2 bg-base-300">
-      <div class="grid grid-flow-col gap-4 text-secondary">
+      <div class="grid grid-flow-col gap-4 underline">
         <a href="https://twitter.com/tommyb_dev" class={buttonClasses}>
           Twitter
         </a>
@@ -19,9 +19,7 @@ const Footer: Component = () => (
           Github
         </a>
       </div>
-      <p class="text-base-content">
-        Copyright © 2022-2023 - All right reserved by Tommy Breslein
-      </p>
+      <p>Copyright © 2022-2023 - All right reserved by Tommy Breslein</p>
     </footer>
   </>
 );

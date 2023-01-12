@@ -20,12 +20,12 @@ interface PostListItemProps {
  * @param props - must satisfy PostListItemProps interface
  */
 const PostListItem: Component<PostListItemProps> = (props) => (
-  <li class="card card-compact max-w-md bg-neutral">
+  <li class="card card-compact max-w-mdi bg-base-200">
     <a href={props.href} class="link-hover">
-      <span class="text-sm text-primary">
+      <span class="text-sm">
         {transformDate(props.date)}:<br />
       </span>
-      <span class="card-title text-secondary-focus">{props.title}</span>
+      <span class="card-title">{props.title}</span>
     </a>
   </li>
 );

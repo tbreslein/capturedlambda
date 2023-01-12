@@ -1,4 +1,5 @@
 import { Component, For } from "solid-js";
+import ThemeSwitch from "./ThemeSwitch";
 
 /**
  * Properties of a navigation item
@@ -46,7 +47,7 @@ const NavList: Component = () => (
     <For each={navItems}>
       {({ href, name, d }) => (
         <li>
-          <a href={href} class="btn-ghost text-secondary">
+          <a href={href} class="btn-ghost underline">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 block"
@@ -62,6 +63,9 @@ const NavList: Component = () => (
         </li>
       )}
     </For>
+    <li>
+      <ThemeSwitch />
+    </li>
   </ul>
 );
 

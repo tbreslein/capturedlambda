@@ -10,7 +10,7 @@ import NavList from "./NavList";
 const Nav: Component = () => (
   <>
     <div class="hidden md:block">
-      <aside class="w-14 pl-0 md:w-36 fixed left-0 top-0 h-screen bg-base-300 p-10">
+      <aside class="w-14 pl-0 md:w-36 fixed left-0 top-0 h-screen bg-base-200 p-10">
         <MainIcon />
         <NavList />
       </aside>
