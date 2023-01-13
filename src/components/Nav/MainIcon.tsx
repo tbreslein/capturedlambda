@@ -5,7 +5,7 @@ import { Component } from "solid-js";
  */
 const MainIcon: Component = () => (
   <div class="flex-1">
-    <a href="/" class="btn btn-ghost normal-case text-xl text-accent">
+    <a href="/" class="btn btn-ghost normal-case text-4xl text-accent">
       [λ]
     </a>
   </div>

@@ -1,8 +1,12 @@
 ---
 import PortfolioLayout from '../layouts/PortfolioLayout.astro';
-import PostListItem from "../components/Main/PostListItem";
-import { Frontmatter, getSortedPosts } from "../utility/postList"
 import { Image } from '@astrojs/image/components';
+import PortfolioHero from '../components/Portfolio/Hero';
+import SmallProjectList from '../components/Portfolio/SmallProjectList';
+
+const imageClasses = "max-w-sm rounded-lg shadow-2xl"
+const imageWidth = "200"
+const imageHeight = "400"
 ---
 
 <!--
@@ -12,15 +16,80 @@ import { Image } from '@astrojs/image/components';
 -->
 
 <PortfolioLayout>
-  <div class="hero">
-    <div class="hero-content flex-col lg:flex-row">
+  <PortfolioHero reverse={false}>
       <div>
-        <h1 class="text-accent">[λ] Tommy Breslein</h1>
-        <h3 class="py-2 text-center">Numerical astrophysics</h3>
-        <h3 class="py-2 text-center">about-to-be software dev</h3>
-        <h3 class="py-2 text-center">Rust evangelist</h3>
+        <h1 class="text-accent text-4xl text-center">Tommy Breslein</h1>
+        <h3 class="py-2">Trained in numerical astrophysics</h3>
+        <h3 class="py-2">Working as a system admin</h3>
+        <h2 class="py-2">Going-to-be software developer</h2>
       </div>
-      <Image src="../../assets/profile_test.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="" width="200" height="400"/>
+      <Image src="../../assets/portfolio/profile1.jpg" class={imageClasses} alt="" width={imageWidth} height={imageHeight}/>
+  </PortfolioHero>
+
+  <PortfolioHero reverse={true}>
+      <div>
+        <p class="py-2">I may be fairly new, but I do not know anyone as passionate as me when it comes to tech and building software.<br>I love diving into the nitty gritty: Figuring out how to architecture something elegantly to combine extensibility, robustness, and performance; I can spend days on that without ever getting bored.</p>
+        <p class="py-2">I am admittedly lazy; in a good way. You will never see me do a task thrice, because I will have automated it in the meantime.</p>
+        <p class="py-2">My unique background also allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
+      </div>
+      <Image src="../../assets/portfolio/profile1.jpg" class="rounded-lg shadow-2xl" alt="" width={imageWidth} height="100"/>
+  </PortfolioHero>
+
+  <div class="hero min-h-screen">
+    <div class="hero-content flex-col">
+      <div>
+        <h1 class="text-center">My big projects</h1>
+
+        <!--
+          Turns out this isn't easy to abstract away due to the image prop.
+          Maybe I can pass the <Image .../> components as children to the SolidJS components?
+        -->
+        <div class="card lg:card-side bg-base-300 shadow-xl my-2">
+          <div class="card-body">
+            <h1 class="card-title">corries</h1>
+            <ul>
+              <li>Framework to run 1D hydrodynamics simulations</li>
+              <li>Ultimately aimed at astrophysics simulations</li>
+              <li>Blazingly fast ⚡🦀</li>
+            </ul>
+            <div class="card-actions justify-end">
+              <a href="https://github.com/tbreslein/corries" target="_blank">
+                <button class="btn btn-primary">GitHub Repo</button>
+              </a>
+            </div>
+          </div>
+          <Image src="../../assets/portfolio/corries.png" alt="" class={imageClasses} aspectRatio="4:3" width="1280"/>
+        </div>
+
+        <div class="card lg:card-side bg-base-300 shadow-xl my-2">
+          <div class="card-body">
+            <h1 class="card-title">tdos</h1>
+            <ul>
+              <li>My current obsession: Learning how to write a kernel</li>
+              <li>I was always interested in how an OS works under the hood, so why not build one?</li>
+              <li>Still super early, but I'm also super pumped to build it!</li>
+              <li>Follows this guide: <a href="https://os.phil-opp.com/" target="_blank">'Writing an OS in Rust'</a></li>
+            </ul>
+            <div class="card-actions justify-end">
+              <a href="https://github.com/tbreslein/tdos" target="_blank">
+                <button class="btn btn-primary">GitHub Repo</button>
+              </a>
+            </div>
+          </div>
+          <Image src="../../assets/portfolio/corries.png" alt="" class="max-w-sm rounded-lg shadow-2xl" aspectRatio="4:3" width="1280"/>
+        </div>
+
+      </div>
     </div>
   </div>
+
+  <SmallProjectList />
+
+  <PortfolioHero reverse={false}>
+      <div>
+        <h1>If you are looking to hire me, this is what you can expect:</h1>
+        <p>In me you will find someone who's extremely inquisitive, results-oriented, and passionate.</p>
+        <p>Due to my almost one-of-a-kind profile and history, I have seen sides of software dev world many haven't, and thus I will bring an incredibly unique perspective to your team <em>guaranteed</em>.</p>
+      </div>
+  </PortfolioHero>
 </PortfolioLayout>
