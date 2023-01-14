@@ -17,13 +17,13 @@ const imageHeight = "400"
 
 <PortfolioLayout>
   <PortfolioHero reverse={false}>
-      <div>
-        <h1 class="text-accent text-4xl text-center">Tommy Breslein</h1>
+      <div class="pr-1">
+        <h1 class="text-accent text-4xl">Tommy Breslein</h1>
         <h3 class="py-2">Trained in numerical astrophysics</h3>
         <h3 class="py-2">Working as a system admin</h3>
-        <h2 class="py-2">Going-to-be software developer</h2>
+        <h2 class="pt-2">Going-to-be software developer</h2>
       </div>
-      <Image src="../../assets/portfolio/profile1.jpg" class={imageClasses} alt="" width={imageWidth} height={imageHeight}/>
+      <Image src="../../assets/portfolio/profile1.jpg" class={imageClasses} alt="" aspectRatio="3:4" width={imageWidth}/>
   </PortfolioHero>
 
   <PortfolioHero reverse={true}>
@@ -32,7 +32,7 @@ const imageHeight = "400"
         <p class="py-2">I am admittedly lazy; in a good way. You will never see me do a task thrice, because I will have automated it in the meantime.</p>
         <p class="py-2">My unique background also allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
       </div>
-      <Image src="../../assets/portfolio/profile1.jpg" class="rounded-lg shadow-2xl" alt="" width={imageWidth} height="100"/>
+      <Image src="../../assets/portfolio/profile1.jpg" class="rounded-lg shadow-2xl" alt="" aspectRatio="9:16" width={imageWidth}/>
   </PortfolioHero>
 
   <div class="hero min-h-screen">
