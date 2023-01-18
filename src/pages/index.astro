@@ -6,7 +6,6 @@ import SmallProjectList from '../components/Portfolio/SmallProjectList';
 
 const imageClasses = "max-w-sm rounded-lg shadow-2xl"
 const imageWidth = "200"
-const imageHeight = "400"
 ---
 
 <!--
@@ -23,14 +22,15 @@ const imageHeight = "400"
         <h3 class="py-2">Working as a system admin</h3>
         <h2 class="pt-2">Going-to-be software developer</h2>
       </div>
-      <Image src="../../assets/portfolio/profile1.jpg" class={imageClasses} alt="" aspectRatio="3:4" width={imageWidth}/>
+      <Image src="../../assets/portfolio/profile1.jpg" fit="outside" class={imageClasses} alt="" aspectRatio="3:4" width={imageWidth}/>
   </PortfolioHero>
 
   <PortfolioHero reverse={true}>
       <div>
-        <p class="py-2">I may be fairly new, but I do not know anyone as passionate as me when it comes to tech and building software.<br>I love diving into the nitty gritty: Figuring out how to architecture something elegantly to combine extensibility, robustness, and performance; I can spend days on that without ever getting bored.</p>
-        <p class="py-2">I am admittedly lazy; in a good way. You will never see me do a task thrice, because I will have automated it in the meantime.</p>
-        <p class="py-2">My unique background also allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
+        <h2>About me</h2>
+        <p class="py-1">The two most important things to know about me are my <span class="font-black">passion</span> and my <span class="font-black">background</span>. This passion was ignited during my physics undergrad. I finished that + my master's degree, worked in research for a couple of years, and have now been working as an admin for two years.</p>
+        <p class="py-1">I love diving into the nitty gritty: Figuring out how to architecture something elegantly to combine extensibility, robustness, and performance; I can spend days on that without ever getting bored.</p>
+        <p class="py-1">Apart from the obvious problem solving skills, my background allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
       </div>
       <Image src="../../assets/portfolio/profile1.jpg" class="rounded-lg shadow-2xl" alt="" aspectRatio="9:16" width={imageWidth}/>
   </PortfolioHero>
@@ -38,7 +38,7 @@ const imageHeight = "400"
   <div class="hero min-h-screen">
     <div class="hero-content flex-col">
       <div>
-        <h1 class="text-center">My big projects</h1>
+        <h1 class="text-center">My biggest project</h1>
 
         <!--
           Turns out this isn't easy to abstract away due to the image prop.
@@ -52,15 +52,22 @@ const imageHeight = "400"
               <li>Ultimately aimed at astrophysics simulations</li>
               <li>Blazingly fast ⚡🦀</li>
             </ul>
+            <p class="object-fill" />
             <div class="card-actions justify-end">
               <a href="https://github.com/tbreslein/corries" target="_blank">
                 <button class="btn btn-primary">GitHub Repo</button>
               </a>
             </div>
           </div>
-          <Image src="../../assets/portfolio/corries.png" alt="" class={imageClasses} aspectRatio="4:3" width="1280"/>
+          <Image src="../../assets/portfolio/corries.png" alt="" fit="outside" class={imageClasses} aspectRatio="4:3" width="1280"/>
         </div>
-
+      </div>
+    </div>
+  </div>
+  <div class="hero min-h-screen">
+    <div class="hero-content flex-col">
+      <div>
+        <h1 class="text-center">My little passion project</h1>
         <div class="card lg:card-side bg-base-300 shadow-xl my-2">
           <div class="card-body">
             <h1 class="card-title">tdos</h1>
@@ -70,13 +77,14 @@ const imageHeight = "400"
               <li>Still super early, but I'm also super pumped to build it!</li>
               <li>Follows this guide: <a href="https://os.phil-opp.com/" target="_blank">'Writing an OS in Rust'</a></li>
             </ul>
+            <p class="object-fill" />
             <div class="card-actions justify-end">
               <a href="https://github.com/tbreslein/tdos" target="_blank">
                 <button class="btn btn-primary">GitHub Repo</button>
               </a>
             </div>
           </div>
-          <Image src="../../assets/portfolio/corries.png" alt="" class="max-w-sm rounded-lg shadow-2xl" aspectRatio="4:3" width="1280"/>
+          <Image src="../../assets/portfolio/tdos.png" alt="" fit="contain" class="max-w-sm rounded-lg shadow-2xl" aspectRatio="4:3" width="1280"/>
         </div>
 
       </div>
@@ -92,4 +100,11 @@ const imageHeight = "400"
         <p>Due to my almost one-of-a-kind profile and history, I have seen sides of software dev world many haven't, and thus I will bring an incredibly unique perspective to your team <em>guaranteed</em>.</p>
       </div>
   </PortfolioHero>
+  <div class="toast z-40 bottom-24">
+    <div class="alert alert-info">
+      <button onclick="window.scrollBy(0, window.innerHeight);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-accent bi bi-arrow-down-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/> </svg>
+      </button>
+    </div>
+  </div>
 </PortfolioLayout>

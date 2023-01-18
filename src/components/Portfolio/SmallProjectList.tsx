@@ -13,7 +13,7 @@ const smallProjects: SmallProjectListItemProps[] = [
       "Keeps the git repos on your system up to date",
       "Useful if you have a lot of repos that you work on on multiple machines",
     ],
-    url: "https://github.com/tbreslein/repoteer"
+    url: "https://github.com/tbreslein/repoteer",
   },
   {
     title: "outcome",
@@ -21,7 +21,7 @@ const smallProjects: SmallProjectListItemProps[] = [
       "Minimal C++ library for a type similar to Haskell's Either or Rust's Result",
       "Also includes a type for bundling small error reports",
     ],
-    url: "https://github.com/tbreslein/outcome"
+    url: "https://github.com/tbreslein/outcome",
   },
   {
     title: "capturedlambda",
@@ -29,7 +29,7 @@ const smallProjects: SmallProjectListItemProps[] = [
       "This website! My dive into some frontend web dev",
       "Simple static page, leveraging the AstroJS meta framework with SolidJS components",
     ],
-    url: "https://github.com/tbreslein/capturedlambda"
+    url: "https://github.com/tbreslein/capturedlambda",
   },
   {
     title: "Myosotis",
@@ -37,7 +37,7 @@ const smallProjects: SmallProjectListItemProps[] = [
       "Planned colaborative ToDo-App for Android",
       "Keep ToDos between multiple people synced",
     ],
-    url: "https://github.com/tbreslein/myosotis"
+    url: "https://github.com/tbreslein/myosotis",
   },
 ];
 
@@ -46,10 +46,9 @@ const SmallProjectListItem: Component<SmallProjectListItemProps> = (props) => (
     <div class="card-body">
       <h2 class="card-title">{props.title}</h2>
       <ul>
-        <For each={props.descriptions}>
-          {(text) => <li>{text}</li>}
-        </For>
+        <For each={props.descriptions}>{(text) => <li>{text}</li>}</For>
       </ul>
+      <p class="object-fill" />
       <div class="card-actions justify-end">
         <a href={props.url} target="_blank">
           <button class="btn btn-primary">GitHub Repo</button>
@@ -66,11 +65,15 @@ const SmallProjectList: Component = () => (
   <div class="hero min-h-screen">
     <div class="hero-content flex-col">
       <div>
-        <h1 class="text-center">Smaller projects</h1>
-        <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
+        <h1 class="text-center">My smaller projects</h1>
+        <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2">
           <For each={smallProjects}>
-            {({title, descriptions, url}) => (
-              <SmallProjectListItem title={title} descriptions={descriptions} url={url} />
+            {({ title, descriptions, url }) => (
+              <SmallProjectListItem
+                title={title}
+                descriptions={descriptions}
+                url={url}
+              />
             )}
           </For>
         </ul>
