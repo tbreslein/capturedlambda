@@ -7,3 +7,7 @@
     -webkit-text-stroke: 1px #252422;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
