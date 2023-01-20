@@ -79,11 +79,11 @@ The reason terminals are used is that they are incredibly simple, and writing pr
 A "Hello world!" program is a program that does nothing but print the text "Hello world!", usually to one of those terminals that you called the program from.
 In this section we want to look at a small example for these sorts of programs to see how source code can look like.
 
-### 2.1 Its contents
+### 2.1 The program itself
 
 Let's look at an example in one of the oldest languages still in use today, C, and we will slowly take apart what this program consists of:
 
-```c
+```
 #include <stdio.h>
 
 int main() {
@@ -95,6 +95,8 @@ int main() {
 One thing that hopefully jumps at you right away is the line `printf("Hello world!");`.
 This is the bit that prints that text, but... why and how?
 
+### 2.2 Functions and `printf`
+
 First of all, `printf` is what we call a function.
 You may remember functions from math class, like `f(x) = 2*x`, which is a function called `f` that takes an argument `x`, and returns the result of `2*x`.
 In programming, a function is similar, where it may take arguments, perform some instructions, and return it may return a result.
@@ -104,6 +106,8 @@ Those instructions are usually just other pieces of code, and the main use of fu
 Like functions in math, many (but not all) programming languages want their arguments handed to them as a list surrounded by parentheses.
 Here, `printf` wants you to hand it a piece of text, often called a "string".
 Since we use text to write our code, we need a way separate literal text from our code, and to do that most languages use quotation marks for that purpose, which is why the `Hello world!` in that example is surrounded by them.
+
+### 2.3 `main()`
 
 Next, let's talk about this line: `int main() {`.
 This is what we call a function definition.
@@ -121,7 +125,7 @@ We often call each step of a function a "statement", and in C (and the many lang
 
 We can see that the `main` function consists of two statements, read from top to bottom:
 
-```c
+```
 printf("Hello world!");
 return 0;
 ```
@@ -138,13 +142,16 @@ In a way, the compiler, the program that does the compiling, looks for this `mai
 When it compiles your program, it goes through the statements inside of the `main` function top to bottom and translates them to machine code.
 You can really think of programs as a list of instructions that way.
 
+### 2.4 The `#include` directive
+
 There was another line in the code snippet up top: `#include <stdio.h>`.
+
 The short and sweet explanation for this line is that the `printf` function isn't always available to the compiler.
 Instead, we need to tell it to read a different file, evaluate the contents of that file, and sort of "add" it to our program.
 The file `stdio.h` contains the definition for `printf`, so that's what we need the compiler to "include" into our program so that it knows what `printf` means.
 Without this line, the compiler would complain that our `main` function wants to call a function called `printf`, but it simply doesn't know that function.
 
-### 2.3 The return value
+### 2.5 The return value
 
 If you've read the first part of this blog series, you might remember that we talked about something called "exit codes", which are numbers that a program returns to the operating system to tell it whether the program ran successfully or not.
 You may also remember that, when a function "returns" the number "0", this tells the OS that the program run without any issues.
