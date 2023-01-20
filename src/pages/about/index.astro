@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Code } from 'astro/components';
 ---
 
 <!--
@@ -8,59 +9,64 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 -->
 
 <BaseLayout title="About">
-  <h1>About Me</h1>
-  <h3>What is this about?</h3>
-  <p>Hey, I'm Tommy, the author of this little blog.</p>
+  <h1>About</h1>
+  <h3>What is this website about?</h3>
+  <p>Hey, I'm Tommy, and this is my personal little website.</p>
   <p>
-    This site is basically a weird combination of venting and writing down
-    my thoughts, as well as playing around with Astro and building something
-    with it from scratch. The posts on here will probably all be related to
-    my journey of getting myself into software development, weird stuff I've
-    seen, things I find fascinating, and other random bla.
+    This site serves as both my portfolio as well as blog. Initially, it
+    was just a blog, but when I started to prepare myself to apply for
+    software development jobs, I figured I could hijack it to also host my
+    portfolio, so here we are!
   </p>
-  <h3>Who is this dude?</h3>
+  <h3>Who am I?</h3>
   <p>
     I'm a physicist turned IT-admin, about to turn software dev. Turns out,
     if you want to get into numerical physics, you need to do programming,
-    but you are likely never being taught a sufficient amount of it during
-    your undergrad. That was the situation I was in, and during my time as a
-    doctoral candidate working on simulation software projects all of this
-    'clicked' somehow.
+    but depending on your school you may have not been taught a sufficient
+    amount of it during your undergrad. That was the situation I was in,
+    and during my time as a doctoral candidate working on simulation
+    software projects all of this 'clicked' somehow.
   </p>
   <p>
-    I didn't just limit myself to just learning the bare minimum though, so
-    I dove into how to do proper software development. I taught myself the
+    I didn't just limit myself to learning the bare minimum though, so I
+    dove into how to do proper software development. I taught myself the
     dreaded topic of 'algorithms and data structures', good patterns and
     structure for programs, properly taught myself the toolchains I worked
     with beyond what I needed to just keep things going in the projects I
     was working in.
   </p>
   <p>
-    My journey was a bit weird, and since I had to realise that academia
-    isn't something I want to work for till I retire. I took an IT job as an
-    'easy' job I could still do at my institute, keep working on my thesis,
-    and then transition into software development next. I want to turn this
-    into my job, because not only has this become a major passion of mine,
-    I think I'm pretty good at it especially considering I'm fully
-    self-taught and I can actually see myself doing this for decades.
+    My journey was a bit weird, and eventually I had to realise that
+    academia isn't something I want to work for till I retire. I took an IT
+    job as an 'easy' job I could still do at my institute, keep working on
+    my thesis, and then transition into software development next. I want
+    to turn this into my job, because not only has this become a major
+    passion of mine, I think I'm pretty good at it especially considering
+    I'm fully self-taught and I can actually see myself doing this for
+    decades.
   </p>
   <h3>
-    Okay, but what about the stack to build this?
+    What about this website?
   </h3>
   <p>
     So, I used AstroJS, SolidJS, and Tailwind/DaisyUI for this blog, and
     hosting it on Netlify. Before landing on AstroJS, I played around with
     NextJS as the metaframework, but it did WAY too much for what I wanted
     this site to be. I discovered AstroJS just a month or two before they
-    release 1.0, and I fell in love because of its flexibility, as well as
+    released 1.0, and I fell in love because of its flexibility, as well as
     making it incredibly easy to just throw markdown at it for content.
+    Obviously, this is incredible for blogs, where you can easily draft
+    them in markdown, throw that into AstroJS, and it just works.
   </p>
   <p>
-    The fact that I can just swap what my components are built with, as
-    well as mix and match different component frameworks if I wanted to, is
-    absolutely fantastic. I ultimately landed on SolidJS for this, because
-    it looked enough like React that I could use previous knowledge, while
-    still being pretty darn easy and intuitive to use.
+    Since AstroJS also gives you the ability to write components in a bunch
+    of different frameworks. Observing and playing around in the javascript
+    frontend frameworks, I got really interested in SolidJS, because it has
+    the - for me at least - fairly intuitive React-like syntax that I was
+    already used to, but with a couple of really sick niceties like
+    build-in state management, and utility components like
+    <tt>&lt;For&gt;</tt>. Obviously, since this is rendered without any
+    reactivity, performance is not a concern of mine here, but it is pretty
+    cool to use nonetheless.
   </p>
 </BaseLayout>
-
