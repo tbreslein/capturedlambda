@@ -5,7 +5,6 @@ import PortfolioHero from '../components/Portfolio/Hero';
 import SmallProjectList from '../components/Portfolio/SmallProjectList';
 
 const imageClasses = "max-w-sm rounded-lg shadow-2xl"
-const imageWidth = "200"
 ---
 
 <!--
@@ -22,7 +21,7 @@ const imageWidth = "200"
         <h3 class="py-2">Working as a system admin</h3>
         <h2 class="pt-2">Going-to-be software developer</h2>
       </div>
-      <Image src="../../assets/portfolio/profile1.jpg" fit="outside" class={imageClasses} alt="" aspectRatio="3:4" width={imageWidth}/>
+      <Image src="../../assets/portfolio/profile1.jpg" fit="cover" position="attention" class={imageClasses} alt="" aspectRatio="9:16" width="250"/>
   </PortfolioHero>
 
   <PortfolioHero reverse={true}>
@@ -34,7 +33,7 @@ const imageWidth = "200"
         <p class="py-1">Apart from the obvious problem solving skills, my background allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
         <p class="pt-1">If you want to read the long version of this text, you can check out the <a href="/about">About</a> section.</p>
       </div>
-      <Image src="../../assets/portfolio/profile1.jpg" class="rounded-lg shadow-2xl" alt="" aspectRatio="9:16" width={imageWidth}/>
+      <Image src="../../assets/portfolio/profile2.jpg" fit="outside" position="attention" class="rounded-lg shadow-2xl" alt="" aspectRatio="9:16" width="200"/>
   </PortfolioHero>
 
   <div class="hero min-h-screen">
@@ -95,6 +94,7 @@ const imageWidth = "200"
 
   <SmallProjectList />
 
+  <!--
   <PortfolioHero reverse={false}>
       <div>
         <h1>If you are looking to hire me, this is what you can expect:</h1>
@@ -109,4 +109,5 @@ const imageWidth = "200"
       </button>
     </div>
   </div>
+  -->
 </PortfolioLayout>
