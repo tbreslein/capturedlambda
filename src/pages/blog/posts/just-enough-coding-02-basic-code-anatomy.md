@@ -1,17 +1,19 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../../layouts/PostLayout.astro
 title: Just enough coding, pt. 2 - Basic code anatomy
 author: Tommy Breslein
-date: 2023-01-19
+date: 2023-02-08
 draft: false
 ---
 
 # Just enough coding, part 2 - Basic code anatomy
 
+Welcome to part 2 of my "Just enough coding" blog series that tries to provide a super high level view of programming aimed at lay people; just enough so that you have a basic understanding of some concepts to talk to your programmer friends / coworkers / partners.
+
 ## 0. previously...
 
 ... we looked at what programs and processes from a user perspective are, and how they interact with an operating system.
-In this entry I want to go over some examples of very basic examples of source code of a program looks like.
+In this entry I want to go a very basic example of what the source code of a program looks like.
 
 ## 1. What even is "source code"?
 
@@ -31,11 +33,11 @@ But, though I don't know where it came from, when programmers talk about "abstra
 Basically, an abstraction is sort of a layer (and you may often hear about "layers of abstraction") that makes something easier to perform a certain task.
 
 The best real-world example I came up with so far is steering a car.
-When you turn the steering in a car, there is a BUNCH of things happening to make your wheels turn.
+When you turn the steering wheel of a car, there is a BUNCH of things happening to make your wheels turn.
 The steering wheel itself is sort of an abstraction for turning the wheels.
 You don't have to think about all the intricate mechanisms that are necessary for that process, all you need to do is turn the wheel.
 
-Some with pushing the gas pedal to accelerate, or hitting the breaks, and so on.
+Similarly with pushing the gas pedal to accelerate, or hitting the breaks, and so on.
 There is an easy interface to operate the car, where, apart from some incredibly rare edge cases, you don't have to think about what's happening under the hood.
 
 All of these are layers of abstraction.
@@ -46,7 +48,7 @@ In programming, "abstraction" is used very similarly, where we want to give an e
 
 "Source code" is probably the most important layer of abstraction in programming.
 A computer operates purely on manipulating ones and zeros and that doesn't exactly scream "easy-to-use".
-So instead people came up with the idea of a "programming language" to abstract away all those details and instead work with what we would call "human readable" code, whereas the bits and bytes are called "machine readable".
+So instead, people came up with the idea of a "programming language" to abstract away all those details and instead work with what we would call "human readable" code, whereas the ones and zeros are called "machine readable".
 
 When you write a program with source code, and you want to to execute that program, you need to turn this human-readable code into machine-readable code.
 The overarching process to achieving that is called "compiling", and we (often) use programs called "compilers" to do that job for us.
@@ -63,23 +65,34 @@ For example, most Windows machines run on the so called "x86_64" architecture, w
 These two families of chips indeed speak different languages and have different instruction sets.
 
 For some Apple users this fact became painfully obvious, when some of their favourite software needed to be "emulated" after transitioning to an M1 machine, breaking some of that software.
-In this context, "emulating" means that those programs where compiled for the pre-M1 chips, which, as I mentioned, have different instruction sets as the new chips, so an emulator basically tries to make that program think it is running on the older chip by translating its instructions into the M1 instruction set.
+In this context, "emulating" means that those programs were compiled for the pre-M1 chips, which, as I mentioned, have different instruction sets as the new chips.
+An emulator basically tries to make that program think it is running on the older chip by translating its instructions into the M1 instruction set.
 
 ## 2. The classic "Hello world!" program
 
-When someone starts learning, one of the first things they learn is writing a "Hello world!" program.
+When someone starts learning to code, one of the first things they learn is writing a "Hello world!" program.
 An important tool when writing programs is a so called "terminal", or "terminal emulator", which is a small program to issue commands to.
-Some windows users might now the "Command prompt", Mac users typically use "iTerm".
+Some windows users might know the "Command prompt", Mac users typically use "iTerm".
 
 If you ever use these, and even issueing a simple command makes you feel like a hacker, you are not alone, by the way.
 The more complex your commmands, the more you feel like one, and that feeling never goes away.
+
+<figure>
+<img
+  style="display:block;margin-left:auto;margin-right:auto;"
+  src="../../../../assets/blog/hackerman.jpeg"
+  alt="A picture of Hackerman from the movie Kung Fury"
+  title="Hackerman"
+  style="display: inline-block; margin: 0 auto; max-width: 500px">
+  <figcaption style="text-align:center;">Source: Kung Fury; <a href="http://www.kungfury.com/">http://www.kungfury.com/</a></figcaption>
+</figure>
 
 The reason terminals are used is that they are incredibly simple, and writing programs that you just run from a terminal and that prints text to that terminal, is very simple as well.
 
 A "Hello world!" program is a program that does nothing but print the text "Hello world!", usually to one of those terminals that you called the program from.
 In this section we want to look at a small example for these sorts of programs to see how source code can look like.
 
-### 2.1 The program itself
+### 2.1 "Hello world!", written in C
 
 Let's look at an example in one of the oldest languages still in use today, C, and we will slowly take apart what this program consists of:
 
@@ -99,13 +112,13 @@ This is the bit that prints that text, but... why and how?
 
 First of all, `printf` is what we call a function.
 You may remember functions from math class, like `f(x) = 2*x`, which is a function called `f` that takes an argument `x`, and returns the result of `2*x`.
-In programming, a function is similar, where it may take arguments, perform some instructions, and return it may return a result.
+In programming, a function is similar, where it may take arguments, perform some instructions, and may return a result.
 Those instructions are usually just other pieces of code, and the main use of functions is separating certain tasks from one another, giving those tasks descriptive names, and abstracting away the details of what the function does while providing an easy-to-use interface.
 `printf` does exactly that: Under the hood, there are bunch of complicated instructions happening, but the only important bit for us is that it makes text appear on the screen.
 
 Like functions in math, many (but not all) programming languages want their arguments handed to them as a list surrounded by parentheses.
 Here, `printf` wants you to hand it a piece of text, often called a "string".
-Since we use text to write our code, we need a way separate literal text from our code, and to do that most languages use quotation marks for that purpose, which is why the `Hello world!` in that example is surrounded by them.
+Since we use text to write our code, we need a way to separate literal text from our code, and to do that most languages use quotation marks, which is why the `Hello world!` in that example is surrounded by them.
 
 ### 2.3 `main()`
 
@@ -157,7 +170,10 @@ If you've read the first part of this blog series, you might remember that we ta
 You may also remember that, when a function "returns" the number "0", this tells the OS that the program run without any issues.
 
 As I mentioned, the `main` function is the starting point of a programs execution, and, likewise, it is also where a program's execution ends.
+In every regular C program, all that really happens is that the `main` function read top to bottom, but it may contain many different other function calls that may run for a long time; or even indefinitely until the program is halted.
 The `return` statement of the `main` function thus tells us which exit code to hand back to the operating system after every other instruction in our program has been executed.
+
+This is works very similarly in most programming languages in use today.
 
 Maybe you have already put it together at this point, but the reason the return value of `main` is "0", is because, if our program reached this line during execution, we want `main` (and with that our program) to end and return "0", indicating to the operation system that our program ran successfully.
 
