@@ -1,10 +1,10 @@
 ---
-import LandingPageLayout from '../layouts/LandingPageLayout.astro';
-import PostListItem from "../components/Main/PostListItem";
-import { Frontmatter, getSortedPosts } from "../utility/postList"
+import PortfolioLayout from '../layouts/PortfolioLayout.astro';
+import { Image } from '@astrojs/image/components';
+import PortfolioHero from '../components/Portfolio/Hero';
+import SmallProjectList from '../components/Portfolio/SmallProjectList';
 
-const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md')
-const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
+const imageClasses = "max-w-sm rounded-lg shadow-2xl"
 ---
 
 <!--
@@ -13,15 +13,101 @@ const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft))
   button.
 -->
 
-<LandingPageLayout>
-  <h1>Captured Lambda</h1>
-  <h3>A small programming-focused blog by a former physicist</h3>
-  <p>
-    This blog is my little foray into writing down my thoughts for the sake of
-    writing them down. Do not expect incredible revelations.
-  </p>
-  <h2>Posts:</h2>
-  <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
-    {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
-  </ul>
-</LandingPageLayout>
+<PortfolioLayout>
+  <PortfolioHero reverse={false}>
+      <div class="pr-1">
+        <h1 class="text-accent text-4xl">Tommy Breslein</h1>
+        <h3 class="py-2">Trained in numerical astrophysics</h3>
+        <h3 class="py-2">Working as a system admin</h3>
+        <h2 class="pt-2">Going-to-be software developer</h2>
+      </div>
+      <Image src="../../assets/portfolio/profile1.jpg" fit="cover" position="attention" class={imageClasses} alt="" aspectRatio="9:16" width="250"/>
+  </PortfolioHero>
+
+  <PortfolioHero reverse={true}>
+      <div>
+        <h2>About me</h2>
+        <p class="pb-1">I'm a system admin with a physics background, currently looking to break into software development, based in Schleswig-Holstein, Germany.</p>
+        <p class="py-1">The two most important things to know about me are my <span class="font-black">passion</span> and my <span class="font-black">background</span>. This passion was ignited during my physics undergrad. I finished that + my master's degree, worked in research for a couple of years, and have now been working as an admin for two years.</p>
+        <p class="py-1">I love diving into the nitty gritty: Figuring out how to architecture something elegantly to combine extensibility, robustness, and performance; I can spend days on that without ever getting bored.</p>
+        <p class="py-1">Apart from the obvious problem solving skills, my background allowed me to get a handle on a bunch of technologies: Git, Docker, Ansible, CI with GitLab, Linux administration, slurm, a bunch of programming languages and their respective toolchains, ...</p>
+        <p class="pt-1">If you want to read the long version of this text, you can check out the <a href="/about">About</a> section.</p>
+      </div>
+      <Image src="../../assets/portfolio/profile2.jpg" fit="outside" position="attention" class="rounded-lg shadow-2xl" alt="" aspectRatio="9:16" width="200"/>
+  </PortfolioHero>
+
+  <div class="hero min-h-screen">
+    <div class="hero-content flex-col">
+      <div>
+        <h1 class="text-center">My biggest project</h1>
+
+        <!--
+          Turns out this isn't easy to abstract away due to the image prop.
+          Maybe I can pass the <Image .../> components as children to the SolidJS components?
+        -->
+        <div class="card lg:card-side bg-base-300 shadow-xl my-2">
+          <div class="card-body">
+            <h1 class="card-title">corries</h1>
+            <ul>
+              <li>Framework to run 1D hydrodynamics simulations</li>
+              <li>Ultimately aimed at astrophysics simulations</li>
+              <li>Blazingly fast ⚡🦀</li>
+            </ul>
+            <p class="object-fill" />
+            <div class="card-actions justify-end">
+              <a href="https://github.com/tbreslein/corries" target="_blank">
+                <button class="btn btn-primary">GitHub Repo</button>
+              </a>
+            </div>
+          </div>
+          <Image src="../../assets/portfolio/corries.png" alt="" fit="outside" class={imageClasses} aspectRatio="4:3" width="1280"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero min-h-screen">
+    <div class="hero-content flex-col">
+      <div>
+        <h1 class="text-center">My little passion project</h1>
+        <div class="card lg:card-side bg-base-300 shadow-xl my-2">
+          <div class="card-body">
+            <h1 class="card-title">tdos</h1>
+            <ul>
+              <li>My current obsession: Learning how to write a kernel</li>
+              <li>I was always interested in how an OS works under the hood, so why not build one?</li>
+              <li>Still super early, but I'm also super pumped to build it!</li>
+              <li>Follows this guide: <a href="https://os.phil-opp.com/" target="_blank">'Writing an OS in Rust'</a></li>
+            </ul>
+            <p class="object-fill" />
+            <div class="card-actions justify-end">
+              <a href="https://github.com/tbreslein/tdos" target="_blank">
+                <button class="btn btn-primary">GitHub Repo</button>
+              </a>
+            </div>
+          </div>
+          <Image src="../../assets/portfolio/tdos.png" alt="" fit="contain" class="max-w-sm rounded-lg shadow-2xl" aspectRatio="4:3" width="1280"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <SmallProjectList />
+
+  <!--
+  <PortfolioHero reverse={false}>
+      <div>
+        <h1>If you are looking to hire me, this is what you can expect:</h1>
+        <p>In me you will find someone who's extremely inquisitive, results-oriented, and passionate.</p>
+        <p>Due to my almost one-of-a-kind profile and history, I have seen sides of software dev world many haven't, and thus I will bring an incredibly unique perspective to your team <em>guaranteed</em>.</p>
+      </div>
+  </PortfolioHero>
+  <div class="toast z-40 bottom-24">
+    <div class="alert alert-info">
+      <button onclick="window.scrollBy(0, window.innerHeight);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-accent bi bi-arrow-down-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/> </svg>
+      </button>
+    </div>
+  </div>
+  -->
+</PortfolioLayout>

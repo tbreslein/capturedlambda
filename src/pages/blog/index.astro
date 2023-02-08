@@ -1,0 +1,27 @@
+---
+import BlogLandingPageLayout from '../../layouts/BlogLandingPageLayout.astro';
+import PostListItem from "../../components/Main/PostListItem";
+import { Frontmatter, getSortedPosts } from "../../utility/postList"
+
+const posts = await Astro.glob<Frontmatter>('./posts/*.md')
+const postList = getSortedPosts(posts.filter((post) => !post.frontmatter.draft));
+---
+
+<!--
+  @astropage
+  The landing page accessed by going to `"/"` or by clicking either the logo or the home navigation
+  button.
+-->
+
+<BlogLandingPageLayout>
+  <h1>captured lambda - Blog</h1>
+  <h3>A small programming-focused blog by a former physicist</h3>
+  <p>
+    This blog is my little foray into writing down my thoughts for the sake of
+    writing them down. Do not expect incredible revelations.
+  </p>
+  <h2>Posts:</h2>
+  <ul class="grid grid-cols-1 gap-x-[1.5rem] md:grid-cols-2 xl:grid-cols-3">
+    {postList.map(post => <PostListItem title={post.title} date={post.date} href={post.url} />)}
+  </ul>
+</BlogLandingPageLayout>

@@ -3,19 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-secondary font-semibold underline;
-  }
-  h2 {
-    @apply text-secondary font-semibold;
-  }
-  p {
-    @apply text-primary;
+  .font-outline {
+    -webkit-text-stroke: 1px #252422;
   }
 }
 
-@layer components {
-  .prose {
-    @apply container mx-auto pt-8 prose-p:text-justify prose-h1:text-center prose-h1:underline prose-h2:underline text-primary prose-headings:text-secondary;
-  }
+html {
+  scroll-behavior: smooth;
 }
