@@ -42,6 +42,15 @@ There is an easy interface to operate the car, where, apart from some incredibly
 
 All of these are layers of abstraction.
 
+<figure>
+<img
+  style="display: block; margin: 0 auto; width: 100%; max-width: 700px;"
+  src="/assets/blog/steering-wheel-abstraction.png"
+  alt="A diagram of how the intent of turning the car is translated through an abstraction layer (the steering wheel), which interacts with hidden details under the hood of the car, which then results in the wheels turning"
+  title="Steering wheel abstraction layer">
+  <figcaption style="text-align:center;">How your intent of turning the car is translated from the abstraction layer (the steering wheel) to its effect. Drawn with <a href="https://excalidraw.com/">Excalidraw</a>.</figcaption>
+</figure>
+
 In programming, "abstraction" is used very similarly, where we want to give an easy-to-use interface to a user or to another developer, that may be restricted in terms of what exactly you can do with that interface (just like the "interface" of your car also limits the things you can do with it), but makes it ultimately easier to understand and use.
 
 ### 1.1 Machine readable vs human readable
@@ -79,12 +88,11 @@ The more complex your commmands, the more you feel like one, and that feeling ne
 
 <figure>
 <img
-  style="display:block;margin-left:auto;margin-right:auto;"
-  src="../../../../assets/blog/hackerman.jpeg"
+  style="display: block; margin: 0 auto; width: 100%; max-width: 700px;"
+  src="/assets/blog/hackerman-is-impressed.png"
   alt="A picture of Hackerman from the movie Kung Fury"
-  title="Hackerman"
-  style="display: inline-block; margin: 0 auto; max-width: 500px">
-  <figcaption style="text-align:center;">Source: Kung Fury; <a href="http://www.kungfury.com/">http://www.kungfury.com/</a></figcaption>
+  title="Hackerman">
+  <figcaption style="text-align:center;">Source: <a href="https://imgur.com/t/hackerman/pxU5DyD">https://imgur.com/t/hackerman/pxU5DyD</a><br>Original source: Kung Fury; <a href="http://www.kungfury.com/">http://www.kungfury.com/</a></figcaption>
 </figure>
 
 The reason terminals are used is that they are incredibly simple, and writing programs that you just run from a terminal and that prints text to that terminal, is very simple as well.
