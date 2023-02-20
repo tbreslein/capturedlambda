@@ -8,14 +8,6 @@ interface SmallProjectListItemProps {
 
 const smallProjects: SmallProjectListItemProps[] = [
   {
-    title: "repoteer",
-    descriptions: [
-      "Keeps the git repos on your system up to date",
-      "Useful if you have a lot of repos that you work on on multiple machines",
-    ],
-    url: "https://github.com/tbreslein/repoteer",
-  },
-  {
     title: "outcome",
     descriptions: [
       "Minimal C++ library for a type similar to Haskell's Either or Rust's Result",
@@ -27,18 +19,34 @@ const smallProjects: SmallProjectListItemProps[] = [
     title: "capturedlambda",
     descriptions: [
       "This website! My dive into some frontend web dev",
-      "Simple static page, leveraging the AstroJS meta framework with SolidJS components",
+      "Simple static page using the AstroJS meta",
     ],
     url: "https://github.com/tbreslein/capturedlambda",
   },
   {
-    title: "Myosotis",
+    title: "tdos",
     descriptions: [
-      "Planned colaborative ToDo-App for Android",
-      "Keep ToDos between multiple people synced",
+      "I always wanted to know how kernels work, so I started to build one",
+      "Follows the 'Writing an OS in Rust' guide by Philipp Oppermann",
     ],
-    url: "https://github.com/tbreslein/myosotis",
+    url: "https://github.com/tbreslein/tdos",
   },
+  {
+    title: "repoteer",
+    descriptions: [
+      "Keeps the git repos on your system up to date",
+      "Useful if you have a lot of repos that you work on on multiple machines",
+    ],
+    url: "https://github.com/tbreslein/repoteer",
+  },
+  // {
+  //   title: "Myosotis",
+  //   descriptions: [
+  //     "Planned colaborative ToDo-App for Android",
+  //     "Keep ToDos between multiple people synced",
+  //   ],
+  //   url: "https://github.com/tbreslein/myosotis",
+  // },
 ];
 
 const SmallProjectListItem: Component<SmallProjectListItemProps> = (props) => (
@@ -51,7 +59,7 @@ const SmallProjectListItem: Component<SmallProjectListItemProps> = (props) => (
       <p class="object-fill" />
       <div class="card-actions justify-end">
         <a href={props.url} target="_blank">
-          <button class="btn btn-primary">GitHub Repo</button>
+          <button class="btn btn-primary">GitHub</button>
         </a>
       </div>
     </div>
