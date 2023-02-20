@@ -41,53 +41,30 @@ const imageClasses = "max-w-sm rounded-lg shadow-2xl"
       <div>
         <h1 class="text-center">My biggest project</h1>
 
-        <!--
-          Turns out this isn't easy to abstract away due to the image prop.
-          Maybe I can pass the <Image .../> components as children to the SolidJS components?
-        -->
         <div class="card lg:card-side bg-base-300 shadow-xl my-2">
           <div class="card-body">
             <h1 class="card-title">corries</h1>
             <ul>
-              <li>Framework to run 1D hydrodynamics simulations</li>
-              <li>Ultimately aimed at astrophysics simulations</li>
+              <li>CORossive RIEmann Solver</li>
+              <li>Framework to run 1D hydrodynamics simulations using Riemann schemes</li>
+              <li>Uses the Runge-Kutta-Fehlberg method for time integration</li>
               <li>Blazingly fast ⚡🦀</li>
             </ul>
             <p class="object-fill" />
             <div class="card-actions justify-end">
+              <a href="https://docs.rs/corries/" target="_blank">
+                <button class="btn btn-primary">docs.rs</button>
+              </a>
+              <a href="https://crates.io/crates/corries" target="_blank">
+                <button class="btn btn-primary">crates.io</button>
+              </a>
               <a href="https://github.com/tbreslein/corries" target="_blank">
-                <button class="btn btn-primary">GitHub Repo</button>
+                <button class="btn btn-primary">GitHub</button>
               </a>
             </div>
           </div>
           <Image src="/assets/portfolio/corries.png" alt="" fit="outside" class={imageClasses} aspectRatio="4:3" width="1280"/>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero min-h-screen">
-    <div class="hero-content flex-col">
-      <div>
-        <h1 class="text-center">My little passion project</h1>
-        <div class="card lg:card-side bg-base-300 shadow-xl my-2">
-          <div class="card-body">
-            <h1 class="card-title">tdos</h1>
-            <ul>
-              <li>My current obsession: Learning how to write a kernel</li>
-              <li>I was always interested in how an OS works under the hood, so why not build one?</li>
-              <li>Still super early, but I'm also super pumped to build it!</li>
-              <li>Follows this guide: <a href="https://os.phil-opp.com/" target="_blank">'Writing an OS in Rust'</a></li>
-            </ul>
-            <p class="object-fill" />
-            <div class="card-actions justify-end">
-              <a href="https://github.com/tbreslein/tdos" target="_blank">
-                <button class="btn btn-primary">GitHub Repo</button>
-              </a>
-            </div>
-          </div>
-          <Image src="/assets/portfolio/tdos.png" alt="" fit="contain" class="max-w-sm rounded-lg shadow-2xl" aspectRatio="4:3" width="1280"/>
-        </div>
-
       </div>
     </div>
   </div>
@@ -102,6 +79,9 @@ const imageClasses = "max-w-sm rounded-lg shadow-2xl"
         <p>Due to my almost one-of-a-kind profile and history, I have seen sides of software dev world many haven't, and thus I will bring an incredibly unique perspective to your team <em>guaranteed</em>.</p>
       </div>
   </PortfolioHero>
+  -->
+
+  <!-- The scroll button -->
   <div class="toast z-40 bottom-24">
     <div class="alert alert-info">
       <button onclick="window.scrollBy(0, window.innerHeight);">
@@ -109,5 +89,5 @@ const imageClasses = "max-w-sm rounded-lg shadow-2xl"
       </button>
     </div>
   </div>
-  -->
+
 </PortfolioLayout>
