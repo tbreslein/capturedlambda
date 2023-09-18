@@ -9,9 +9,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.capturedlambda.com",
-  experimental: {
-    integrations: true
-  },
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
