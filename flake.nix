@@ -10,10 +10,9 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         NPM_CONFIG_PREFIX = toString ./npm_config_prefix;
-      in
-      {
+      in {
         devShell = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
+          buildInputs = with pkgs; [
             bashInteractive
             nodejs
             nodePackages.npm
@@ -21,7 +20,6 @@
             nodePackages.typescript-language-server
             nodePackages.vscode-langservers-extracted
           ];
-          buildInputs = [ ];
           inherit NPM_CONFIG_PREFIX;
           shellHook = ''
             export PATH="${NPM_CONFIG_PREFIX}/bin:$PATH"
